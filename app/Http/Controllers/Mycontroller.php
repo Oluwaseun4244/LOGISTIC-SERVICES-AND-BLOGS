@@ -325,9 +325,6 @@ class Mycontroller extends Controller
 
          //getting the original image name from request
          $imageName = $Request->file("image")->getClientOriginalName();
-         
-         
-    
          $destination = $Request->image->move(("images"), $imageName);
 
          $allRequest["image"] = $destination;

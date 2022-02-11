@@ -22,10 +22,6 @@ class AdminAuth
             return redirect('adminlogin');
         }
 
-        // if (!($request->Session()->has("adminKey"))){
-
-        //     return redirect('adminlogin');
-        // }
         return $next($request);
     }
 }

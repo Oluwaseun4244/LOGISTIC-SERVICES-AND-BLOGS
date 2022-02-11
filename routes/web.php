@@ -14,10 +14,9 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('home');
-});
 
+
+Route::match(["GET", "POST"], '/', [Mycontroller::class, "home"]);
 Route::match(["GET", "POST"], '/home', [Mycontroller::class, "home"]);
 Route::match(["GET", "POST"], '/signup', [Mycontroller::class, "signup"]);
 Route::match(["GET", "POST"], '/about', [Mycontroller::class, "about"]);
